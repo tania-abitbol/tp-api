@@ -1,5 +1,12 @@
 # TP API
 
+## Installation
+
+```
+npm install
+npm run dev
+```
+
 ## But de l'application en une phrase
 
 À remplir
