@@ -11,13 +11,13 @@ const getRecipes = (type, number, diet) => {
     .then((resp) => {
       let recipesContainer = "";
       for (let index = 0; index < resp.results.length; index++) {
-        recipesContainer += ` <div id="recipesContainer" class="recipes">
+        recipesContainer += ` <div class="recipes__card">
         <h2>${resp.results[index].title}</h2>
-        <div class="numbers">
-        <h3>${resp.results[index].readyInMinutes}min</h3>
-        <h4>${resp.results[index].servings} personnes</h4>
+        <div class="recipes__card__numbers">
+        <h3 class="recipes__card__time">${resp.results[index].readyInMinutes}min</h3>
+        <h4 class="recipes__card__people">${resp.results[index].servings} personnes</h4>
         </div>
-        <img class="recipe__image" src="https://spoonacular.com/recipeImages/${resp.results[index].image}" /></div>
+        <img class="recipes__card__image" src="https://spoonacular.com/recipeImages/${resp.results[index].image}" /></div>
       `;
       }
       RecipesContainer.innerHTML = recipesContainer;
